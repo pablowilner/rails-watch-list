@@ -1,0 +1,16 @@
+<%= render "/components/banner" %>
+<h1 class="text-center" id="list-title">All the Lists</h1>
+<div class="container d-flex justify-content-around mb-3">
+    <% @lists.each do |list| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="<%= list.url %>" alt="Card image cap"  >
+      <div class="card-body d-flex justify-content-between align-items-end">
+        <h5 class="card-title"><%= list.name %></h5>
+        <%= link_to "See List", list_path(list), class: "btn btn-primary" %>
+      </div>
+    </div>
+    <% end %>
+</div>
+<div class="container d-flex">
+  <%= link_to "Create New List", new_list_path, class: "mx-auto btn btn-flat" %>
+</div>
