@@ -2,7 +2,7 @@
 <%# <h1 class="text-center" id="list-title">All the Lists</h1> %>
 <div class="cards d-flex justify-content-around m-5">
     <% @lists.each do |list| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path list.photo.key %>)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key %>')">
       <%= link_to list.name, list_path(list) %>
     </div>
     <% end %>
