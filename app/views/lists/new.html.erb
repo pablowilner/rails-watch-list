@@ -1,7 +1,9 @@
-<h1>Create a new list</h1>
-<%= simple_form_for(@list) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :url %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+    <h1 class="text-white text-center">Create a new list</h1>
+    <%= simple_form_for(@list) do |f| %>
+      <%= f.input :name, label_html: { class: 'text-white' } %>
+      <!-- <%= f.input :url %> -->
+      <%= f.input :photo, as: :file, label_html: { class: 'text-white' } %>
+      <%= f.submit %>
+    <% end %>
+</div>

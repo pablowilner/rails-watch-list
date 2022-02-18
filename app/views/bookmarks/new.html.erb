@@ -1,6 +1,8 @@
-<h1>New Bookmark for <%= @list.name %></h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+    <h1 class="text-white text-center">New Bookmark for <%= @list.name %> List</h1>
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie, label_html: { class: 'text-white' } %>
+      <%= f.input :comment, label_html: { class: 'text-white' } %>
+      <%= f.submit %>
+    <% end %>
+</div>
